@@ -18,10 +18,10 @@ Se especifica la configuración del servidor SQL, el nombre de la base de datos,
 ```python
 # Configuración de la base de datos
 database_config = {
-    'server': 'dislicores-1.cxc0gcgy4dsz.us-east-2.rds.amazonaws.com,1433',  # Cambia esto por tu servidor
-    'database': 'dislicores-1',  # Cambia esto por tu base de datos
-    'username': 'admin',  # Cambia esto por tu usuario
-    'password': 'KingKong9#_9+',  # Cambia esto por tu contraseña
+    'server': 'dislicores-1.cxc0gcgy4dsz.us-east-2.rds.amazonaws.com,1433',  
+    'database': 'dislicores-1', 
+    'username': 'admin',  
+    'password': 'KingKong9#_9+',  
 }
 
 # Crear cadena de conexión
@@ -76,10 +76,10 @@ class DataHandler(FileSystemEventHandler):
             new_rows = new_data[~new_data[id_column].isin(existing_data[id_column])]
 
             # Verificar integridad referencial para 'Inventario_inicialID' si es necesario
-            if table_name == 'Tabla_VentasFinal':
-                inventario_inicial_ids = pd.read_sql("SELECT Inventario_inicialID FROM Tabla_InventarioInicial", self.engine)
-                valid_ids = inventario_inicial_ids['Inventario_inicialID']
-                new_rows = new_rows[new_rows['Inventario_inicialID'].isin(valid_ids)]
+            if table_name == 'VentasFinales':
+                inventario_inicial_ids = pd.read_sql("SELECT InventoryInicialID FROM InventarioInicial2016", self.engine)
+                valid_ids = inventario_inicial_ids['InventoryInicialID']
+                new_rows = new_rows[new_rows['InventoryInicialID'].isin(valid_ids)]
 
             # Insertar datos nuevos en la base de datos
             if not new_rows.empty:
@@ -93,12 +93,12 @@ class DataHandler(FileSystemEventHandler):
 
     def get_id_column(self, table_name):
         id_columns = {
-            'Tabla_VentasFinal': 'VentasID',
-            'Tabla_Detallecompras': 'Detalle_compraID',
-            'Tabla_InventarioFinal': 'Inventario_FinalID',
-            'Tabla_InventarioInicial': 'Inventario_inicialID',
-            'Tabla_Producto': 'MarcaID',
-            'Tabla_Compras': 'CompraID',
+            'VentasFinales': 'VentasID',
+            'DetalleCompra': 'DetalleCompraID',
+            'InventarioFinal2016': 'InventoryFinalID',
+            'InventarioInicial2016': 'InventoryInicialID',
+            'Producto': 'BrandID',
+            'FacturaCompras': 'CompraID',
         }
         return id_columns.get(table_name, 'id')
 ```
@@ -143,4 +143,5 @@ if __name__ == '__main__':
         observer.stop()
     observer.join()
     print("El observador ha sido detenido.")
+
 ```
