@@ -6,23 +6,26 @@
 
 <br>
 
-+ Yenifer Briceño** - Análisis de Datos
-+ Antonio Astudillo** - Ingeniero de Datos
-+ Juan Bermudez** - Científico de Datos
-+ Dante Arola** - Análisis de Datos
-+ Alexandro Lugo** - Científico de Datos
++ Yenifer Briceño - Análisis de Datos
++ Antonio Astudillo - Ingeniero de Datos
++ Juan Bermudez - Científico de Datos
++ Dante Arola - Análisis de Datos
++ Alexandro Lugo - Científico de Datos
 
 <br>
 
 ## Desafios 🧪
 
 <br>
+
 Nuestra iniciativa se centra en resolver los desafíos relacionados con la gestión de inventarios que enfrenta Dislicores, una distribuidora de bebidas. Mediante el análisis de datos y la implementación de modelos de optimización, buscamos incrementar la eficiencia en la administración de inventarios, mejorar la rotación de productos y el descubrimientos de diferentes KPIs
+
 <br>
 
 ## Objetivos 🎯
 
 <br>
+
 + Minimizar los desabastecimientos mediante un seguimiento eficiente del stock.
 + Automatizar los procesos de reposición de inventario.
 + Evaluar y mejorar el rendimiento de proveedores.
@@ -58,6 +61,7 @@ En esta carpeta se encuentra el archivo con extensión (.ipynb), el cual contien
 <br>
 
 Esta carpeta contiene una imagen del Diagrama de Entidad-Relación (DER) de la base de datos, generada directamente desde SQL Server Management. La imagen muestra las relaciones entre las tablas y ofrece una visión clara de la estructura de la base de datos.
+
 <br>
 
 ## Carpeta ETL-EDA 📚
