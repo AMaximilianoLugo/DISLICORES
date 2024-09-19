@@ -1,4 +1,4 @@
-## Código para Automatización y Carga Incremental de Datos usando Watchdog 🚀
+# Código para Automatización y Carga Incremental de Datos usando Watchdog 🚀
 
 Este script en Python está diseñado para supervisar una carpeta específica en tu sistema de archivos. Utiliza Watchdog para detectar la creación o modificación de archivos CSV en tiempo real y luego cargar de forma incremental estos datos en la base de datos **InventarioBD** alojada en SQL Server.
 
